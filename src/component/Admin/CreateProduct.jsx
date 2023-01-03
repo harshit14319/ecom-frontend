@@ -10,7 +10,6 @@ import StorageIcon from "@material-ui/icons/Storage";
 import SpellcheckIcon from "@material-ui/icons/Spellcheck";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 import DiscountIcon from "@material-ui/icons/LocalOffer";
-import SideBar from "./Sidebar";
 import { NEW_PRODUCT_RESET } from "../../constans/ProductConstans";
 import { ToastContainer, toast } from 'react-toastify';
 

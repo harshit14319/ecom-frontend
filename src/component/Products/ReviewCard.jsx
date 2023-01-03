@@ -6,7 +6,7 @@ import Loading from "../../more/Loader"
 const ReviewCard = ({review}) => {
     // eslint-disable-next-line
 
-const { product,loading } = useSelector(
+const { loading } = useSelector(
     (state) => state.productDetails
   );
 

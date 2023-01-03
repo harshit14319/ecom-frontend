@@ -1,75 +1,81 @@
-import './App.css';
+import "./App.css";
 import { ThemeProvider } from "styled-components";
 import Home from "./component/Home/Home";
 import WebFont from "webfontloader";
-import { useEffect } from 'react';
+import { useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import ProductDetails from './component/Products/ProductDetails';
+import ProductDetails from "./component/Products/ProductDetails";
 import LoginSignup from "./component/Authentication/LoginSignup";
-import UserData from './more/UserData';
-import { useSelector } from 'react-redux';
-import { loadUser } from './actions/userAction';
+import UserData from "./more/UserData";
+import { useSelector } from "react-redux";
+import { loadUser } from "./actions/userAction";
 import Store from "./store";
-import ProtectedRoute from './route/ProtectedRoute';
+import ProtectedRoute from "./route/ProtectedRoute";
 import Profile from "./component/user/Profile";
-import UpdatePassword from './component/user/UpdatePassword';
-import EditProfile from './component/user/EditProfile';
-import About from './component/about/About';
+import UpdatePassword from "./component/user/UpdatePassword";
+import EditProfile from "./component/user/EditProfile";
+import About from "./component/about/About";
 import Products from "./component/Products/Products";
 import Search from "./component/Products/Search";
 import Support from "./more/Support";
-import Cart from './component/cart/Cart';
-import Favourites from './component/cart/Favourites';
-import Shipping from './component/cart/Shipping';
-import ConfirmOrder from './component/cart/ConfirmOrder';
-import axios from 'axios';
-import { useState } from 'react';
-import Payment from './component/cart/Payment';
-import {loadStripe} from '@stripe/stripe-js';
-import {Elements} from '@stripe/react-stripe-js';
-import Success from './component/cart/Success';
+import Cart from "./component/cart/Cart";
+import Favourites from "./component/cart/Favourites";
+import Shipping from "./component/cart/Shipping";
+import ConfirmOrder from "./component/cart/ConfirmOrder";
+import axios from "axios";
+import { useState } from "react";
+import Payment from "./component/cart/Payment";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+import Success from "./component/cart/Success";
 import MyOrder from "./component/user/MyOrder";
 import MyOrderDetails from "./component/user/MyOrderDetails";
 import CommingSoon from "./more/CommingSoon";
 import Rules from "./more/Rules";
 import Contact from "./more/Contact";
+<<<<<<< HEAD
+import MoreOption from "./component/user/MoreOption";
+import Dashboard from "./component/Admin/Dashboard";
+import CreateProduct from "./component/Admin/CreateProduct";
+=======
 import MoreOption from "./component/user/MoreOption"
 import Dashboard from './component/Admin/Dashboard';
 import CreateProduct from './component/Admin/CreateProduct';
-import AllProducts from "../../frontend/src/component/Admin/AllProducts";
-import EditProduct from "../../frontend/src/component/Admin/EditProduct";
-import AllOrder from "../../frontend/src/component/Admin/AllOrder";
-import UpdateOrder from "../../frontend/src/component/Admin/UpdateOrder";
-import AllUsers from "../../frontend/src/component/Admin/AllUsers";
-import UpdateUser from "../../frontend/src/component/Admin/UpdateUser";
-import AllReviews from "../../frontend/src/component/Admin/AllReviews";
-import ForgotPassword from "../../frontend/src/component/user/ForgotPassword";
-import ResetPassword from "../../frontend/src/component/user/ResetPassword";
-import Notfound from "../../frontend/src/more/Notfound";
+>>>>>>> cd62311baddaeaebb9825b1cd9bbc35da52c6229
+import AllProducts from "./component/Admin/AllProducts";
+import EditProduct from "./component/Admin/EditProduct";
+import AllOrder from "./component/Admin/AllOrder";
+import UpdateOrder from "./component/Admin/UpdateOrder";
+import AllUsers from "./component/Admin/AllUsers";
+import UpdateUser from "./component/Admin/UpdateUser";
+import AllReviews from "./component/Admin/AllReviews";
+import ForgotPassword from "./component/user/ForgotPassword";
+import ResetPassword from "./component/user/ResetPassword";
+import Notfound from "./more/Notfound";
 
 function App() {
-    const theme = {
-      colors: {
-        heading: "rgb(24 24 29)",
-        text: "rgb(24 24 29)",
-        white: "#fff",
-        black: " #212529",
-        helper: "#8490ff",
-        bg: "rgb(249 249 255)",
-        footer_bg: "#0a1435",
-        btn: "rgb(98 84 243)",
-        border: "rgba(98, 84, 243, 0.5)",
-        hr: "#ffffff",
-        gradient:
-          "linear-gradient(0deg, rgb(132 144 255) 0%, rgb(98 189 252) 100%)",
-        shadow:
-          "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;",
-        shadowSupport: " rgba(0, 0, 0, 0.16) 0px 1px 4px",
-      },
-      media: { mobile: "1500px" },
-    };
+  const theme = {
+    colors: {
+      heading: "rgb(24 24 29)",
+      text: "rgb(24 24 29)",
+      white: "#fff",
+      black: " #212529",
+      helper: "#8490ff",
+      bg: "rgb(249 249 255)",
+      footer_bg: "#0a1435",
+      btn: "rgb(98 84 243)",
+      border: "rgba(98, 84, 243, 0.5)",
+      hr: "#ffffff",
+      gradient:
+        "linear-gradient(0deg, rgb(132 144 255) 0%, rgb(98 189 252) 100%)",
+      shadow:
+        "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;",
+      shadowSupport: " rgba(0, 0, 0, 0.16) 0px 1px 4px",
+    },
+    media: { mobile: "1500px" },
+  };
 
-  const {isAuthenticated,user} = useSelector((state) =>state.user);
+  const { isAuthenticated, user } = useSelector((state) => state.user);
 
   const [stripeApiKey, setStripeApiKey] = useState("");
 
@@ -85,11 +91,10 @@ function App() {
         families: ["Roboto", "Droid Sans", "Chilanka"],
       },
     });
-    
-    Store.dispatch(loadUser());
-    
-    getStripeApiKey();
 
+    Store.dispatch(loadUser());
+
+    getStripeApiKey();
   }, []);
   return (
     <Router>
@@ -117,11 +122,7 @@ function App() {
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/more" component={MoreOption} />
           <Route exact path="/password/forgot" component={ForgotPassword} />
-          <Route
-            exact
-            path="/admin/product"
-            component={CreateProduct}
-          />
+          <Route exact path="/admin/product" component={CreateProduct} />
           <Route
             exact
             path="/password/reset/:token"

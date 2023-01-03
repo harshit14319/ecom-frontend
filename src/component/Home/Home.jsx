@@ -40,8 +40,8 @@ const Home = () => {
         {/* Carousel */}
         <div className="banner">
                <Carousel>
-                 <img src={bg} className="bgImg"/>
-                 <img src={bg2} className="bgImg"/>
+                 <img src={bg} alt="hostel" className="bgImg"/>
+                 <img src={bg2} alt="hostel1" className="bgImg"/>
                </Carousel>
              <div className="home__content">
                <div style={{

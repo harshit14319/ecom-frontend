@@ -2,11 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "./styles/Button.js";
-import { NavLink } from "react-router-dom";
 import a from "../src/Assets/connectEasy Logo.png";
-
-
-import { FaDiscord, FaInstagram, FaYoutube } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
