@@ -33,15 +33,9 @@ import MyOrderDetails from "./component/user/MyOrderDetails";
 import CommingSoon from "./more/CommingSoon";
 import Rules from "./more/Rules";
 import Contact from "./more/Contact";
-<<<<<<< HEAD
 import MoreOption from "./component/user/MoreOption";
 import Dashboard from "./component/Admin/Dashboard";
-import CreateProduct from "./component/Admin/CreateProduct";
-=======
-import MoreOption from "./component/user/MoreOption"
-import Dashboard from './component/Admin/Dashboard';
 import CreateProduct from './component/Admin/CreateProduct';
->>>>>>> cd62311baddaeaebb9825b1cd9bbc35da52c6229
 import AllProducts from "./component/Admin/AllProducts";
 import EditProduct from "./component/Admin/EditProduct";
 import AllOrder from "./component/Admin/AllOrder";
