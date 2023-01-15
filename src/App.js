@@ -71,13 +71,13 @@ function App() {
 
   const { isAuthenticated, user } = useSelector((state) => state.user);
 
-//   const [stripeApiKey, setStripeApiKey] = useState("");
+  const [stripeApiKey, setStripeApiKey] = useState("");
 
-//   async function getStripeApiKey() {
-//     const { data } = await axios.get("/api/v2/stripeapikey");
+  async function getStripeApiKey() {
+    const { data } = await axios.get("/api/v2/stripeapikey");
 
-//     setStripeApiKey(data.stripeApiKey);
-//   }
+    setStripeApiKey(data.stripeApiKey);
+  }
 
   useEffect(() => {
     WebFont.load({
@@ -95,11 +95,11 @@ function App() {
       <ThemeProvider theme={theme}>
         {isAuthenticated && <UserData user={user} />}
 
-//         {stripeApiKey && (
-//           <Elements stripe={loadStripe(stripeApiKey)}>
-//             <ProtectedRoute exact path="/process/payment" component={Payment} />
-//           </Elements>
-//         )}
+         {stripeApiKey && (
+          <Elements stripe={loadStripe(stripeApiKey)}>
+            <ProtectedRoute exact path="/process/payment" component={Payment} />
+          </Elements>
+        )}
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/product/:id" component={ProductDetails} />
@@ -193,10 +193,10 @@ function App() {
             component={AllReviews}
           />
 
-//           <Route
-//             component={
-//               window.location.pathname === "/process/payment" ? null : Notfound
-//             }
+    <Route
+            component={
+              window.location.pathname === "/process/payment" ? null : Notfound
+            }
           />
         </Switch>
       </ThemeProvider>
