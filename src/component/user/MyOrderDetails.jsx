@@ -5,7 +5,6 @@ import MetaData from "../../more/Metadata";
 import { Link } from "react-router-dom";
 import { Typography } from "@material-ui/core";
 import { getOrderDetails, clearErrors } from "../../actions/OrderAction";
-import { useAlert } from "react-alert";
 import Loading from "../../more/Loader";
 import BottomTab from "../../more/BottomTab";
 
@@ -21,7 +20,7 @@ const MyOrderDetails = ({ match }) => {
     }
 
     dispatch(getOrderDetails(match.params.id));
-  }, [dispatch, alert, error, match.params.id]);
+  }, [dispatch, error, match.params.id]);
   return (
     <>
       {loading ? (

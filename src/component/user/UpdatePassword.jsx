@@ -46,7 +46,7 @@ const dispatch = useDispatch();
         type: UPDATE_PASSWORD_RESET,
       });
     }
-  }, [dispatch, error, alert, history, isUpdated]);
+  }, [dispatch, error, history, isUpdated]);
 
   return (
     <>

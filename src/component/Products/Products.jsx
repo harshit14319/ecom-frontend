@@ -49,7 +49,7 @@ const Products = ({ match }) => {
           dispatch(clearErrors())
       }
     dispatch(getProduct(keyword, currentPage,category));
-  }, [dispatch, keyword,currentPage,category,alert,error]); 
+  }, [dispatch, keyword,currentPage,category,error]); 
 
 
 
@@ -89,7 +89,7 @@ const Products = ({ match }) => {
                   border: "1px solid #999",
                   margin:"1vmax",
                   flex: ".177",
-                  borderRadius: '1rem',
+                  // borderRadius: '1rem',
                   width: "150px",
                   height: '39rem',
                     boxShadow:' 0 5px 10px ',

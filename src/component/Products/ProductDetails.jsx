@@ -58,7 +58,7 @@ const ProductDetails = ({ match, history }) => {
       dispatch(clearErrors());
     }
     dispatch(getProductDetails(match.params.id));
-  }, [dispatch, match.params.id, error, alert]);
+  }, [dispatch, match.params.id, error]);
 
   const options = {
     value: product.ratings,

@@ -9,10 +9,7 @@ import LockIcon from "@material-ui/icons/Lock";
 import { ToastContainer, toast } from 'react-toastify';
 
 const ResetPassword = ({ history, match }) => {
-    const dispatch = useDispatch();
-
-    const { isAuthenticated } = useSelector((state) => state.user);
-  
+    const dispatch = useDispatch();  
     const { error, success, loading } = useSelector(
       (state) => state.forgotPassword
     );

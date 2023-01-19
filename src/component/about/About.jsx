@@ -6,8 +6,6 @@ import Loading from "../../more/Loader";
 import MetaData from "../../more/Metadata";
 import "./About.css";
 import BottomTab from "../../more/BottomTab";
-import a from '../../Assets/connectEasy Logo.png'
-import { colors } from "@material-ui/core";
 
 const About = () => {
     const { loading } = useSelector(
@@ -30,7 +28,7 @@ const About = () => {
         {/* 1st verse */}
         <div className="row flex">
           <div className="col__2">
-            <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/page/about-1.png" />
+            <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/page/about-1.png" alt='logo'/>
           </div>
           <div className="col__2">
             <div className="meta">
@@ -79,7 +77,7 @@ const About = () => {
                     minHeight:"230px"
                 }}>
                 <div className="flex align__items__center justify__content__center image">
-              <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-1.svg" />
+              <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-1.svg" alt='lg'/>
                 </div>
               <span>Best Service for College Students</span>
               <p>
@@ -96,7 +94,7 @@ const About = () => {
                     minHeight:"230px"
                 }}>
                 <div className="flex align__items__center justify__content__center image">
-              <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-2.svg" />
+              <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-2.svg" alt='pic1' />
                 </div>
               <span>Best For Trust & Quality</span>
               <p>
@@ -113,7 +111,7 @@ const About = () => {
                     minHeight:"230px"
                 }}>
                 <div className="flex align__items__center justify__content__center image">
-              <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-3.svg" />
+              <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-3.svg" alt='pic2' />
                 </div>
               <span>Fast Delivery System within Hostels</span>
               <p>
@@ -132,7 +130,7 @@ const About = () => {
                     minHeight:"230px"
                 }}>
                 <div className="flex align__items__center justify__content__center image">
-              <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-4.svg" />
+              <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-4.svg" alt='pic3'/>
                 </div>
               <span>ChattEasy Service</span>
               <p>
@@ -150,7 +148,7 @@ const About = () => {
                     minHeight:"230px"
                 }}>
                 <div className="flex align__items__center justify__content__center image">
-              <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-5.svg" />
+              <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-5.svg" alt='pic4' />
                 </div>
               <span>100% satisfication</span>
               <p>
@@ -168,7 +166,7 @@ const About = () => {
                     minHeight:"230px"
                 }}>
                 <div className="flex align__items__center justify__content__center image">
-              <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-6.svg" />
+              <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-6.svg" alt='pic5' />
                 </div>
               <span>Ticket Raiser System</span>
               <p>

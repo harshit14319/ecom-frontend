@@ -1,14 +1,13 @@
 import React from 'react';
 import "./Favourite.css";
 import { useSelector, useDispatch } from "react-redux";
-import {deleteFavouriteItemsToCart, deleteOfferFavouriteItemsToCart} from "../../actions/FavouriteAction"
+import {deleteFavouriteItemsToCart} from "../../actions/FavouriteAction"
 import { Typography } from "@material-ui/core";
 import RemoveShoppingCartIcon from "@material-ui/icons/FavoriteBorder";
 import { Link } from "react-router-dom";
 import FavouriteItemsCard from './FavouriteItemsCard.jsx';
 import MetaData from '../../more/Metadata';
 import Loading from '../../more/Loader';
-import { useState } from "react";
 import BottomTab from '../../more/BottomTab';
 
 const Favourite = ({history}) => {

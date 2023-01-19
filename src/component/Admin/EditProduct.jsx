@@ -79,7 +79,6 @@ const UpdateProduct = ({ history, match }) => {
     }
   }, [
     dispatch,
-    alert,
     error,
     history,
     isUpdated,

@@ -38,7 +38,7 @@ const MoreOption = ({ history }) => {
       <div
         className="moreOption"
         style={{
-          display: "flex",
+          // display: "flex",
           padding: "10px",
           flexDirection: "column",
           marginBottom: "10vh",

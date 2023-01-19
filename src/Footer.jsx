@@ -26,7 +26,8 @@ const Footer = () => {
           <div className="container grid grid-four-column">
        <div className="footer1st">
         <img
-          src={a}
+                src={a}
+                alt='foot'
           style={{ cursor: "pointer" }}
           height='90px'
               />
